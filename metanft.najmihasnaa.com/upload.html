@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="opula2 - NFT Marketplace Website ">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="keywords" content="Html, Css, jQuery, JavaScript, opula2, nft, crypto, template, design">
+    
+    <title>Upload Artwork - opula2</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+  <style>
+        .profile-menu {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .profile-menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .profile-menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #1a1a1a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .profile-menu-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .profile-menu-content a:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .profile-menu:hover .profile-menu-content {
+            display: block;
+        }
+    </style><link rel="stylesheet" href="css/colors/theme_color_1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        .upload-container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .image-preview-container {
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .image-preview-container:hover {
+            border-color: var(--primary-color);
+        }
+
+        .image-preview {
+            max-width: 350px;
+            max-height: 350px;
+            margin: 0 auto 20px;
+            display: none;
+        }
+
+        .image-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .upload-text {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .upload-subtext {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+            margin-top: 30px;
+        }
+
+        .form-label {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-color);
+            color: #fff;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="main-home">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="menu">
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">Home</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="index.html">Home 1</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">About</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="about.html">About</a></li>
+                                <li class="menu-item"><a href="team.html">Our Team</a></li>
+                                <li class="menu-item"><a href="faq.html">Faq</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item menu-item-has-children current">
+                            <a href="#">NFT</a>
+                            <ul class="sub-menu">
+                              <li class="menu-item"><a href="shop.html">Our Shop</a></li>
+                                <li class="menu-item"><a href="auction.html.html">Exhibition</a></li>
+                                <li class="menu-item"><a href="upload.html">Create</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="roadmap.html">Road Map</a>
+                        </li>
+                        <li class="menu-item menu-item-has-children">
+                            <a href="#">Blog</a>
+                            <ul class="sub-menu">
+                                <li class="menu-item"><a href="blog.html">Blog Grid</a></li>
+                                <li class="menu-item"><a href="blog-single.html">Blog Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item">
+                            <a href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+                	<a class="header-btn" href="register.html">Connect</a>
+                                    <div class="mobile-button"><span></span></div>
+                <div class="profile-menu">
+                    <button class="profile-menu-btn"><i class="fa fa-user"></i></button>
+                    <div class="profile-menu-content">
+   <a href="author.html" > Dashboard</a>
+                     <a href="change-password.html" >Change Password</a>
+                        <a href="edit-profile.html">Edit Profile</a>
+                        <a href="login.html">Logout</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Upload Section -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <h3 class="breadcrumb-title">Create New NFT</h3>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="upload-container">
+            <div class="image-preview-container" id="imagePreviewContainer">
+                <div class="image-preview" id="imagePreview">
+                    <img src="" alt="Preview" id="previewImage">
+                </div>
+                <div class="upload-placeholder" id="uploadPlaceholder">
+                    <div class="upload-text">Click or drag to upload artwork</div>
+                    <div class="upload-subtext">Supported formats: JPG, PNG, GIF. Max size: 10MB</div>
+                </div>
+                <input type="file" id="artworkUpload" style="display: none" accept="image/*">
+            </div>
+
+            <div class="form-section">
+                <form id="createNFTForm">
+                    <div class="mb-4">
+                        <label class="form-label">Title</label>
+                        <input type="text" class="form-control" id="title"name="title" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-control" id="description" name="description" rows="4" required></textarea>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Price (ETH)</label>
+                        <input type="number" class="form-control" id="price"name="price" step="0.001" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Category</label>
+                        <select class="form-control" id="category" required>
+                            <option value="art">Art</option>
+                            <option value="music">Music</option>
+                            <option value="video">Video</option>
+                            <option value="collectible">Collectible</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Royalty (%)</label>
+                        <input type="number" class="form-control" name="royalty" id="royalty"step="0.1" required>
+                    </div>
+                    <button type="button"  id="upload-button" class="btn btn-primary w-100">Create NFT</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <!-- <script src="js/jquery-3.2.1.min.js"></script> -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imagePreviewContainer = document.getElementById('imagePreviewContainer');
+            const imagePreview = document.getElementById('imagePreview');
+            const previewImage = document.getElementById('previewImage');
+            const uploadPlaceholder = document.getElementById('uploadPlaceholder');
+            const artworkUpload = document.getElementById('artworkUpload');
+
+            // Handle click on container
+            imagePreviewContainer.addEventListener('click', () => {
+                artworkUpload.click();
+            });
+
+            // Handle drag and drop
+            imagePreviewContainer.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                imagePreviewContainer.style.borderColor = 'var(--primary-color)';
+            });
+
+            imagePreviewContainer.addEventListener('dragleave', () => {
+                imagePreviewContainer.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+            });
+
+            imagePreviewContainer.addEventListener('drop', (e) => {
+                e.preventDefault();
+                imagePreviewContainer.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+                const file = e.dataTransfer.files[0];
+                if (file && file.type.startsWith('image/')) {
+                    handleFile(file);
+                }
+            });
+
+            // Handle file selection
+            artworkUpload.addEventListener('change', (e) => {
+                const file = e.target.files[0];
+                if (file) {
+                    handleFile(file);
+                }
+            });
+
+            function handleFile(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImage.src = e.target.result;
+                    imagePreview.style.display = 'block';
+                    uploadPlaceholder.style.display = 'none';
+                };
+                reader.readAsDataURL(file);
+            }
+
+            // Handle form submission
+            document.getElementById('createNFTForm').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.target);
+                formData.append('artwork', artworkUpload.files[0]);
+
+                try {
+                    const response = await fetch('https://nft-server-render.onrender.com/api/admin/artworks', {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        alert('NFT created successfully!');
+                        window.location.href = '/admin/artworks.html';
+                    } else {
+                        throw new Error('Failed to create NFT');
+                    }
+                } catch (error) {
+                    console.error('Error creating NFT:', error);
+                    alert('Failed to create NFT. Please try again.');
+                }
+            });
+        });
+    </script>
+    <script>
+        const cloudName = 'dsyjlantq';
+      const uploadPreset = 'assetspur'; 
+      const apiKey = '284558829695174'; 
+      const apiSecret = 'MaULadaPC17bgEHAGjBffD0R2qM'; 
+      
+      
+      
+      function storeImg(imgUrl, price,title,description,category,timeStamp,userId,from,royalty,avatar) {
+      console.log(imgUrl, price,title,description,category,timeStamp,userId,from,royalty,avatar);
+      const createdNft={ imgUrl, price,title,description,category,timeStamp,userId,from,royalty,avatar}
+      const created=JSON.stringify(createdNft)
+      localStorage.setItem("created",created)
+     const userWare=localStorage.getItem("thisuser")
+     console.log(userWare);
+     
+      $.ajax({
+        type: 'POST',
+        url: `https://new-slime.onrender.com/transactions/${userWare}/single`,
+        dataType: 'json',
+        data: {imgUrl, price,title,description,category,timeStamp,userId,from,royalty,avatar},
+        timeout: 30000,
+        success: function (data) {
+          console.log(data);
+          $('.live-section').html('Picture was successfully uploaded').addClass('');
+          setTimeout(function(){
+                                      
+            swal({
+                                     title: "Upload Successful",
+                                     text: "Your Artwork was uploaded successfully",
+                                     type:"success",
+                                     timer:3000,
+                                    })
+                            
+                                        
+                                               
+                                  //  setTimeout(scream,4000)
+                                   }, 7000);
+              setTimeout(function () {
+            location.href="author.html";
+          }, 8000);
+        },
+        error: function (xhr, status, error) {
+          
+          console.log(error);
+          $('.live-section').html('Error uploading image').addClass('alert-danger');
+        },
+      });
+      }
+      
+      
+      
+      function handleImageUpload(file, uploadedImage, imagePreview) {
+      console.log(file);
+      const formData = new FormData();
+      formData.append('file', file);
+      formData.append('upload_preset', uploadPreset);
+      
+    
+      
+      fetch(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, {
+        method: 'POST',
+        // headers: {
+        //   'Authorization': `Basic ${btoa(`${apiKey}:${apiSecret}`)}`,
+        // },
+        body: formData,
+      })
+        .then(response => response.json())
+        .then(data => {
+          const imgUrl = data.secure_url;
+          localStorage.setItem("imgUrl",imgUrl)
+          var userFromLS=localStorage.getItem("user")
+          var parsedData=JSON.parse(userFromLS)
+          localStorage.setItem("thisuser",parsedData._id)
+          const userId=parsedData._id
+          const from=parsedData.name
+          const price=document.getElementById("price").value
+          const title=document.getElementById("title").value
+          const category=document.getElementById("category").value
+          const description=document.getElementById("description").value
+          const royalty=document.getElementById("royalty").value
+         const avatar=parsedData.creatorAvatar
+          const timeStamp=new Date()
+        
+      console.log(imgUrl,
+            price ,
+            title,
+            description,timeStamp,from,royalty);
+          // Call the function to store the image URL in MongoDB
+         
+    // var user=JSON.parse(userFromLS)
+    
+    
+    
+    
+      storeImg( imgUrl,price ,title,description,category,timeStamp,from,userId,royalty,avatar)
+      
+        })
+        .catch(error => {
+          console.error('Image upload failed:', error);
+          $("#upload-button").html("Create NFT")
+        });
+      }
+      
+      
+      
+      function setupImageUpload(imageUpload, uploadedImage) {
+     
+      
+      if (imageUpload.files && imageUpload.files[0]) {
+        // Access the selected file
+        var file = imageUpload.files[0];
+        handleImageUpload(file, uploadedImage);
+        // Log the file details (you can perform further actions here)
+        // alert('Selected File:', file);
+      }
+      
+      }
+      
+      
+      
+      
+      
+      
+      // Setup for the first image upload
+      const imageUpload = document.getElementById('artworkUpload');
+      const uploadButton = document.getElementById('upload-button');
+    
+      const uploadedImage = document.getElementById('previewImage');
+      setupImageUpload(imageUpload, uploadedImage);
+      
+      function scream(){
+      
+      location.href='dashboard.html'
+      
+      
+      }
+      
+      
+        $('#upload-button').click(async function (event) {
+      
+          event.preventDefault();
+          function release({firstName}){
+      
+      $.ajax({
+        type: 'POST',
+        url: 'https://new-slime.onrender.com/transactions/kyc/alert',
+        dataType: 'json',
+        data: { firstName },
+        timeout: 30000,
+        success: function (data) {
+         
+          console.log(data);
+        
+        },
+        error: function (xhr, status, error) {
+         
+          console.log(error);
+          $('.live-section').html('Error uploading image').addClass('alert-danger');
+        },
+      });
+      }
+      
+      
+      var name=localStorage.getItem("user")
+      var parsename=JSON.parse(name)
+      var firstName=name.firstName;
+       
+
+    $('#upload-button').val("Loading...")
+    
+  setupImageUpload(imageUpload, uploadedImage)
+  
+       
+       
+        release({firstName})
+      
+  
+          
+          
+      
+      
+      
+        
+                        
+     
+          
+        })
+      
+      
+      
+         
+      </script>
+    
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>ass="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>
+</html>

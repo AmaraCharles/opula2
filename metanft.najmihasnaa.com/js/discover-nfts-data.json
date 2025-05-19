@@ -1,0 +1,58 @@
+[
+    {
+        "title": "3D Illustration",
+        "image": "images/bid/1.jpg",
+        "creator": "@Sinanart",
+        "creatorAvatar": "images/avatars/2.jpg",
+        "currentBid": "4.07 ETH",
+        "category": "video"
+    },
+    {
+        "title": "Purple Leaf",
+        "image": "images/bid/2.jpg",
+        "creator": "@Yassirart",
+        "creatorAvatar": "images/avatars/3.jpg",
+        "currentBid": "1.00 ETH",
+        "category": "art"
+    },
+    {
+        "title": "Abstract Art",
+        "image": "images/bid/3.jpg",
+        "creator": "@Ahmedart",
+        "creatorAvatar": "images/avatars/4.jpg",
+        "currentBid": "3.12 ETH",
+        "category": "music"
+    },
+    {
+        "title": "Berries Art",
+        "image": "images/bid/4.jpg",
+        "creator": "@Yomnaart",
+        "creatorAvatar": "images/avatars/1.jpg",
+        "currentBid": "2.04 ETH",
+        "category": "sport"
+    },
+    {
+        "title": "Digital Painting",
+        "image": "images/bid/5.jpg",
+        "creator": "@Habibaart",
+        "creatorAvatar": "images/avatars/6.jpg",
+        "currentBid": "1.87 ETH",
+        "category": "game"
+    },
+    {
+        "title": "Multicolor Illustration",
+        "image": "images/bid/6.jpg",
+        "creator": "@Simayart",
+        "creatorAvatar": "images/avatars/8.jpg",
+        "currentBid": "2.47 ETH",
+        "category": "video"
+    },
+    {
+        "title": "Colorful Paint",
+        "image": "images/bid/7.jpg",
+        "creator": "@Leilart",
+        "creatorAvatar": "images/avatars/14.jpg",
+        "currentBid": "4.07 ETH",
+        "category": "video"
+    }
+]

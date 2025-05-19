@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Trending NFT Carousel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .featured-artworks {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .artwork-card {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+
+    .artwork-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .artwork-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+
+    .artwork-info {
+      padding: 15px 20px;
+    }
+
+    .artwork-info h4 {
+      color: #343a40;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .artwork-info .artist {
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .artwork-info .price {
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #007bff;
+    }
+
+    @media (max-width: 767.98px) {
+      .artwork-card {
+        max-width: 100%;
+      }
+
+      .artwork-card img {
+        height: 120px;
+      }
+
+      .swiper-container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="featured-artworks">
+    <div class="container">
+      <h3 class="text-center mb-5">Trending NFTs</h3>
+
+      <div class="swiper-container">
+        <div class="swiper-wrapper" id="nftSwiperWrapper">
+          <!-- Cards will be injected here -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const trendingNFTs = [
+      {
+        title: "Digital Blossom",
+        image: "./images/nftt.jpg",
+        creator: "@art_by_flora",
+        currentBid: "2.04 ETH",
+        description:"plenty",
+        creatorAvatar:"./images/nftt.jpg"
+      },
+              
+      {
+        title: "Cyber City",
+        image: "./images/nftt.jpg",
+        creator: "@tech_vision",
+        currentBid: "4.07 ETH",
+           description:"plenty",
+        creatorAvatar:"./images/nftt.jpg"
+      },
+      {
+        title: "Dream Portal",
+        image: "./images/nftt.jpg",
+        creator: "@dreamscape",
+        currentBid: "1.00 ETH",
+           description:"plenty",
+        creatorAvatar:"./images/nftt.jpg"
+      },
+      {
+        title: "AI Galaxy",
+        image: "./images/nftt.jpg",
+        creator: "@neuronova",
+        currentBid: "3.33 ETH",
+           description:"plenty",
+        creatorAvatar:"./images/nftt.jpg"
+      },
+      {
+        title: "Neon Twilight",
+        image: "./images/nftt.jpg",
+        creator: "@neonqueen",
+        currentBid: "2.75 ETH",
+           description:"plenty",
+        creatorAvatar:"./images/nftt.jpg"
+      }
+    ];
+
+    function shuffleArray(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    function renderSwiperNFTs() {
+      const wrapper = document.getElementById("nftSwiperWrapper");
+      if (!wrapper) return;
+
+      const shuffledNFTs = shuffleArray([...trendingNFTs]);
+
+      wrapper.innerHTML = shuffledNFTs
+        .map((nft, index) => `
+          <div class="swiper-slide d-flex justify-content-center">
+            <div class="artwork-card" onclick="handleCardClick(${index})">
+              <img src="${nft.image}" alt="${nft.title}">
+              <div class="artwork-info">
+                <h4>${nft.title}</h4>
+                <p class="artist">by ${nft.creator} <img src="./images/verify.png" style="width:15px;height:15px" /></p>
+                <div class="price">${nft.currentBid}</div>
+              </div>
+            </div>
+          </div>
+        `).join("");
+
+      new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        },
+        breakpoints: {
+          0: { slidesPerView: 1.1, spaceBetween: 20 },
+          576: { slidesPerView: 1.5, spaceBetween: 20 },
+          768: { slidesPerView: 2, spaceBetween: 25 },
+          992: { slidesPerView: 3, spaceBetween: 30 }
+        }
+      });
+    }
+
+    function handleCardClick(index) {
+      const selectedNFT = trendingNFTs[index];
+      console.log("Selected NFT:", selectedNFT);
+      localStorage.setItem("nftCard", JSON.stringify(selectedNFT));
+      window.location.href = "product-card.html";
+    }
+
+    document.addEventListener("DOMContentLoaded", renderSwiperNFTs);
+  </script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>
+</html>

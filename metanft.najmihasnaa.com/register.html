@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="opula2 - NFT Marketplace Website ">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <meta name="keywords" content="Html, Css, jQuery, JavaScript, opula2, nft, crypto, template, design">
+    
+    <title>Register - opula2</title>
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+  <style>
+        .profile-menu {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .profile-menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .profile-menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #1a1a1a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .profile-menu-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .profile-menu-content a:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .profile-menu:hover .profile-menu-content {
+            display: block;
+        }
+    </style><link rel="stylesheet" href="css/colors/theme_color_1.css">
+
+    <style>
+        .register-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .form-section {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .form-label {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .form-control:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: var(--primary-color);
+            color: #fff;
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="main-home">
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="index.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+                </div>
+                <nav class="main-nav">
+                    <ul class="menu">
+                        <li class="menu-item">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="login.html">Login</a>
+                        
+                        <li class="menu-item">
+                            <a href="register.html">Register</a>
+                        </li>
+                    </ul>
+                </nav>
+                                    <div class="mobile-button"><span></span></div>
+                <div class="profile-menu">
+                    <button class="profile-menu-btn"><i class="fa fa-user"></i></button>
+                    <div class="profile-menu-content">
+   <a href="author.html" > Dashboard</a>
+                     <a href="change-password.html" >Change Password</a>
+                        <a href="edit-profile.html">Edit Profile</a>
+                        <a href="login.html">Logout</a>
+                    </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Register Section -->
+    <section class="breadcrumb-area">
+        <div class="container">
+            <h3 class="breadcrumb-title">Create Account</h3>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="register-container">
+            <div class="form-section">
+                <div id='mail_success' class='live-section'></div>
+                <form id="signupForm">
+                    <div class="mb-4">
+                        <label class="form-label">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" required>
+                    </div>
+                   
+                    <div class="mb-4">
+                        <label class="form-label">Username</label>
+                        <input type="text" class="form-control" name="username"  id="username"required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Email address</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Phone Number</label>
+                        <input type="text" class="form-control" name="email" id="phone" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="re-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100" id="registerBtn">Register</button>
+                    <div class="text-center mt-3">
+                        <span class="text-muted">Already have an account? </span>
+                        <a href="login.html" class="text-primary">Login here</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+
+ 
+        async function fetchUser() {
+              const response = await $.ajax({
+                type: "GET",
+                url: 'https://new-slime.onrender.com/users',
+                dataType: "json",
+                timeout: 30000,
+              });
+        
+              console.log(response.data);
+              return response.data
+            }
+        
+           
+            
+            $(document).ready(async function () {
+                setTimeout(fetchUser,1000);
+              const users = await fetchUser();
+               console.log(users)
+            })
+            </script>    
+    
+      <script>
+        var btn=document.getElementById('registerBtn');
+       function red () {
+               btn.style.opacity="1"
+               btn.innerHTML="register"
+       
+                              }
+                              function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+       
+       function blurr (){
+           
+           btn.style.opacity="0.5"
+           btn.innerHTML= "Loading . . ."
+          
+       }
+       
+               async function registerUser(values) {
+                   await $.ajax({
+                       type: "POST",
+                       url: "https://new-slime.onrender.com/auth/register",
+                       dataType: "json",
+                       data: { ...values },
+                       timeout: 30000,
+                       success: function (data) {
+                           console.log(data);
+                            
+                        if (data.otp && data.otpExpiration) {
+                // Store OTP and expiration time for later use
+                const otp = data.otp; // The OTP
+                const otpExpiration = data.otpExpiration; // OTP expiration time
+
+                localStorage.setItem("otp",otp)
+                localStorage.setItem("otpExpiration",otpExpiration)
+                // You can now use otp and otpExpiration in your frontend as needed.
+                console.log("OTP:", otp); // For debugging, or store it for OTP verification
+                console.log("OTP Expiration:", new Date(otpExpiration)); // Show expiration time in readable format
+
+                // Example of using the OTP to autofill an input or validate
+                // document.getElementById('otp-input').value = otp;
+            }
+                           const user=JSON.stringify(data)
+                           localStorage.setItem("user",user)
+                           $('.live-section').html("Account was successfully created").addClass('alert-success')
+                           setTimeout(function () {
+                               $(location).prop('href', './login.html')
+                           }, 1000)
+       
+                       },
+                       error: function (xhr, status, error) {
+                           red();
+                           console.log(error);
+                           $('.live-section').html("Poor Network Connectivity.Kindly refresh.").addClass('alert-danger')
+                       }
+                   });
+       
+               }
+       
+       
+               $('#signupForm').submit(function (e) {
+                   e.preventDefault(); // prevents page reload
+                   blurr();
+                   const name = $('#name').val();
+                   const username = $('#username').val();
+                   const email = $('#email').val();
+                   const password = $('#password').val();
+                   const phoneNumber = $('#phone').val();
+                   
+                   localStorage.setItem("password",password)
+                   localStorage.setItem("email",email)
+                 
+                   localStorage.setItem("firstName",name)
+                   
+                   console.log(email, password, name, phoneNumber, username);
+                   registerUser({ email, password, name, phoneNumber, username });
+               });
+    
+             topFunction();
+    
+       
+           </script>
+    
+    
+   
+<div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>ass="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>ass="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>ass="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>
+</html>

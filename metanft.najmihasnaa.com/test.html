@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Featured Artworks Carousel</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      background: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .featured-artworks {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .artwork-card {
+      background: #fefefe;
+      border-radius: 15px;
+      overflow: hidden;
+      margin: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .artwork-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .artwork-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .artwork-info {
+      padding: 20px;
+    }
+
+    .artwork-info h4 {
+      color: #343a40;
+      margin-bottom: 10px;
+      font-size: 1.2rem;
+    }
+
+    .artwork-info .artist {
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-bottom: 10px;
+    }
+
+    .artwork-info .price {
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    #artworksCarousel .carousel-control-prev,
+    #artworksCarousel .carousel-control-next {
+      width: 40px;
+      height: 40px;
+      background: #007bff;
+      border-radius: 50%;
+      opacity: 0.8;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #artworksCarousel .carousel-control-prev {
+      left: -20px;
+    }
+
+    #artworksCarousel .carousel-control-next {
+      right: -20px;
+    }
+
+    #artworksCarousel .carousel-control-prev:hover,
+    #artworksCarousel .carousel-control-next:hover {
+      opacity: 1;
+    }
+
+    .carousel-inner {
+      overflow: visible;
+    }
+
+    @media (max-width: 768px) {
+      .artwork-card {
+        margin: 10px 0;
+      }
+
+      #artworksCarousel .carousel-control-prev,
+      #artworksCarousel .carousel-control-next {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== Start Featured Artworks Carousel ========== -->
+  <section class="featured-artworks">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-title text-center mb-5">Featured Artworks</h3>
+          <div id="artworksCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              <!-- Slides will be injected here -->
+            </div>
+            <a class="carousel-control-prev" href="#artworksCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#artworksCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          
+            <a class="carousel-control-prev" href="#artworksCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#artworksCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS and dependencies -->
+   <script src="./js/trending-nfts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>
+</html>

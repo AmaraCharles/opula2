@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from opula2.najmihasnaa.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 10:06:57 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="opula2 - NFT Marketplace Website ">
+        <meta name="keywords" content="Html, Css, jQuery, JavaScript, opula2, nft, crypto, template, design">
+        
+        <!-- Title -->
+        <title>opula2 - NFT Marketplace Website </title>
+        <!-- Favicon -->
+        <link rel="icon" href="images/icon.png">
+        <!-- Google Fonts -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma:wght@400;500;600;700;800&amp;display=swap">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap">
+ 
+        <!-- Font Awesome Css -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Bootstrap 4 Css -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <!-- Animate Css -->
+        <link rel="stylesheet" href="css/animate.min.css">
+        <!-- Main Style Css -->
+        <link rel="stylesheet" href="css/main.css">
+		<!-- Color Skin Css -->
+        <link rel="stylesheet" href="css/colors/theme_color_1.css">
+		<!-- Add this before the closing head tag -->
+<link rel="stylesheet" href="css/featured-artworks.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<style>
+	* {
+	  box-sizing: border-box;
+	}
+  
+	html, body {
+	  overflow-x: hidden;
+	  margin: 0;
+	  padding: 0;
+	  width: 100%;
+	}
+  
+	body {
+	  /* background: #f8f9fa; */
+	  font-family: 'Segoe UI', sans-serif;
+	}
+  
+	.featured-artworks {
+	  padding: 60px 0;
+	  /* background: #fff; */
+	}
+  
+	.swiper-container {
+	  width: 100%;
+	}
+  
+	.swiper-slide {
+	  display: flex;
+	  justify-content: center;
+	  width: 100%;
+	}
+  
+	.artwork-card {
+	  background: #fff;
+	  border-radius: 15px;
+	  overflow: hidden;
+	  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	  transition: transform 0.3s ease;
+	  width: 100%;
+	  max-width: 500px;
+	  margin: 0 auto;
+	  cursor: pointer;
+	}
+  
+	.artwork-card:hover {
+	  transform: translateY(-10px);
+	}
+  
+	.artwork-card img {
+	  width: 100%;
+	  height: 140px;
+	  object-fit: cover;
+	}
+  
+	.artwork-info {
+	  padding: 15px 20px;
+	}
+  
+	.artwork-info h4 {
+	  color: #343a40;
+	  margin-bottom: 8px;
+	  font-size: 1.1rem;
+	}
+  
+	.artwork-info .artist {
+	  color: #6c757d;
+	  font-size: 0.9rem;
+	  margin-bottom: 6px;
+	}
+  
+	.artwork-info .price {
+	  color: #007bff;
+	  font-weight: bold;
+	  font-size: 1rem;
+	}
+  
+	.swiper-button-next,
+	.swiper-button-prev {
+	  color: #007bff;
+	}
+  
+	@media (max-width: 767.98px) {
+	  .artwork-card {
+		max-width: 100%;
+	  }
+  
+	  .artwork-card img {
+		height: 120px;
+	  }
+  
+	  .swiper-container {
+		padding-left: 15px;
+		padding-right: 15px;
+	  }
+	}
+  </style>
+  
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+       
+    </head>
+    <body class="main-home">
+
+		<!-- ========== Start Color Switcher ========== -->
+        
+        <div class="switch-button"><i class="fa fa-cog fa-spin"></i></div>
+        <div class="switched-styles">
+            <h4>Color Switcher</h4>
+            <ul class="list-unstyled">
+                <li data-color="theme_color_1"></li>
+                <li data-color="theme_color_2"></li>
+				<li data-color="theme_color_3"></li>
+				<li data-color="theme_color_4"></li>
+				<li data-color="theme_color_5"></li>
+				<li data-color="theme_color_6"></li>
+            </ul>
+            <div class="hide-button">&times;</div>
+        </div>
+        
+        <!-- ========== End Color Switcher ========== -->
+        
+        <!-- ========== Start Navbar ========== -->   
+
+        <header class="header">
+			<div class="container">
+				<div class="header-inner">
+					<div class="logo">
+						<a href="index.html"><img class="img-fluid" src="images/logo2.png" alt=""></a>
+					</div>
+					<nav class="main-nav">
+						<ul class="menu">
+							<li class="menu-item menu-item-has-children current">
+								<a href="#0">Home</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="index.html">Home</a></li>
+									<!-- <li class="menu-item current-item"><a href="index-3.html">Home 2</a></li> -->
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#0">About</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="about.html">About</a></li>
+									<li class="menu-item"><a href="team.html">Our Team</a></li>
+									<li class="menu-item"><a href="faq.html">Faq</a></li>
+								</ul>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#0">NFT</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="auctions.html">Exhibition</a></li>
+									<li class="menu-item"><a href="shop.html">Our Shop</a></li>
+									<li class="menu-item"><a href="upload.html">Create</a></li>
+									
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a href="roadmap.html">Road Map</a>
+							</li>
+							<li class="menu-item menu-item-has-children">
+								<a href="#0">Blog</a>
+								<ul class="sub-menu">
+									<li class="menu-item"><a href="blog.html">Blog Grid</a></li>
+									<li class="menu-item"><a href="blog-single.html">Blog Details</a></li>
+								</ul>
+							</li>
+							<li class="menu-item">
+								<a href="contact.html">Contact</a>
+							</li>
+							
+							<li class="menu-item">
+								<a href="login.html">Login</a>
+							</li>
+						</ul>
+					</nav>
+					<a class="header-btn" href="register.html">Connect</a>
+					<div class="mobile-button"><span></span></div>
+                <div class="profile-menu">
+                    <button class="profile-menu-btn"><i class="fa fa-user"></i></button>
+                    <div class="profile-menu-content">
+                          <a href="./author.html" >Dashboard</a>
+                      
+                        <a href="./change-password.html" >Change Password</a>
+                        <a href="./edit-profile.html">Edit Profile</a>
+                        <a href="./login.html">Logout</a>
+                    </div>
+				</div>
+				  <style>
+        .profile-menu {
+            position: relative;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .profile-menu-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .profile-menu-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background-color: #1a1a1a;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 4px;
+        }
+
+        .profile-menu-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .profile-menu-content a:hover {
+            background-color: rgba(255,255,255,0.05);
+        }
+
+        .profile-menu:hover .profile-menu-content {
+            display: block;
+        }
+    </style>
+			</div>
+		</header>
+        
+        <!-- ========== End Navbar ========== -->
+        
+        <!-- ========== End Featured Artworks Carousel ========== -->
+        
+        <!-- ========== Start Home ========== -->
+        <section class="home2">
+			<div class="owl-carousel owl-theme">
+				<!-- New Item -->
+    			<div class="owl-item bg-cover" style="background-image: url(images/home.jpg);">
+					<div class="overlay">
+						<div class="container">
+							<div class="display-table">
+								<div class="home-content display-table-cell">
+									<h1>Welcome to opula2</h1>
+									<p>Maecenas sit pretium, cras in. In quisque sem id eget In vel.</p>
+									<div class="my-btn">
+										<a href="#" class="main-btn"><span>View Market</span></a>
+										<a href="#" class="main-btn custom-btn"><span>Create NFT</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- New Item -->
+    			<div class="owl-item bg-cover" style="background-image: url(images/home2.jpg);"> 
+					<div class="overlay">
+						<div class="container">
+							<div class="display-table">
+								<div class="home-content display-table-cell">
+									<h1>Welcome to opula2</h1>
+									<p>Maecenas sit pretium, cras in. In quisque sem id eget In vel.</p>
+									<div class="my-btn">
+										<a href="#" class="main-btn"><span>View Market</span></a>
+										<a href="#" class="main-btn custom-btn"><span>Create NFT</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- New Item -->
+    			<div class="owl-item bg-cover" style="background-image: url(images/home3.jpg);"> 
+					<div class="overlay">
+						<div class="container">
+							<div class="display-table">
+								<div class="home-content display-table-cell">
+									<h1>Welcome to opula2</h1>
+									<p>Maecenas sit pretium, cras in. In quisque sem id eget In vel.</p>
+									<div class="my-btn">
+										<a href="shop.html" class="main-btn"><span>View Market</span></a>
+										<a href="upload.html" class="main-btn custom-btn"><span>Create NFT</span></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+        </section>
+
+
+
+		<section class="featured-artworks">
+			<div class="container">
+			  <h3 class="text-center mb-5 text-dark">Trending NFTs</h3>
+		
+			  <div class="swiper-container">
+				<div class="swiper-wrapper" id="nftSwiperWrapper">
+				  <!-- Cards will be injected here -->
+				</div>
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			  </div>
+			</div>
+		  </section>
+
+        <!-- ========== End Home ========== -->
+		<!-- ========== Start Featured Artworks Carousel ========== -->
+<!-- ========== Start Featured Artworks Carousel ========== -->
+		<!-- ========== Start Trending Auctions ========== -->
+
+		<section class="trending-auctions">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<h3 class="main-title text-dark">Trending</h3>
+					</div>
+					<div class="col-6">
+						<div class="nft-more discover-more text-right text-dark">
+							<a href="shop.html" target="_blank">Discover more <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Dynamic content will be loaded here by trending-nfts.js -->
+				</div>
+			</div>
+		</section>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	  
+		<script>
+  function fetchUsers() {
+            $.ajax({
+                url: 'https://new-slime.onrender.com/users',
+                method: 'GET',
+                success: function(data) {
+                    const users = Array.isArray(data) ? data : data.data;
+                    usersData = users;
+                    renderTable();
+                    renderPagination();
+                },
+                error: function() {
+                    console.error('Error fetching users');
+                }
+            });
+        }
+
+		
+		  const trendingNFTs = [
+			{
+			  title: "Digital Blossom",
+			  _id:"681d7d90b0984a4dd1de1e6b",
+			  image: "./images/nftt.jpg",
+			  creator: "@art_by_flora",
+			  currentBid: "2.04",
+			  description:"plenty",
+			  creatorAvatar:"./images/nftt.jpg"
+			},
+					
+			{
+			  title: "Cyber Ape",
+			  _id:"681d7d90b0984a4dd1de1e6b",
+			  image: "https://ipfs.io/ipfs/QmQ6VgRFiVTdKbiebxGvhW3Wa3Lkhpe6SkWBPjGnPkTttS/1484.png",
+			  creator: "@tech_vision",
+			  currentBid: "4.07",
+				 description:"plenty",
+			  creatorAvatar:"./images/nftt.jpg"
+			},
+			{
+			  title: "Mutant Ape #5678",
+			  _id:"681d7d90b0984a4dd1de1e6b",
+			  image: "https://ipfs.io/ipfs/QmQ6VgRFiVTdKbiebxGvhW3Wa3Lkhpe6SkWBPjGnPkTttS/9988.png",
+			  creator: "@dreamscape",
+			  currentBid: "1.00 ",
+				 description:"plenty",
+			  creatorAvatar:"./images/nftt.jpg"
+			},
+			{
+			  title: "AI Galaxy",
+			  image: "./images/ai.avif",
+			  _id:"681d7d90b0984a4dd1de1e6b",
+			  creator: "@neuronova",
+			  currentBid: "3.33 ",
+				 description:"plenty",
+			  creatorAvatar:"./images/ai.avif"
+			},
+			{
+			  title: "Neon Twilight",
+			  image: "./images/neo.avif",
+			  _id:"681d7d90b0984a4dd1de1e6b",
+			  creator: "@neonqueen",
+			  currentBid: "2.75",
+				 description:"plenty",
+			  creatorAvatar:"./images/nftt.jpg"
+			}
+		  ];
+	  
+		  function shuffleArray(array) {
+			for (let i = array.length - 1; i > 0; i--) {
+			  const j = Math.floor(Math.random() * (i + 1));
+			  [array[i], array[j]] = [array[j], array[i]];
+			}
+			return array;
+		  }
+	  
+		  function renderSwiperNFTs() {
+			const wrapper = document.getElementById("nftSwiperWrapper");
+			if (!wrapper) return;
+	  
+			const shuffledNFTs = shuffleArray([...trendingNFTs]);
+	  
+			wrapper.innerHTML = shuffledNFTs
+			  .map((nft, index) => `
+				<div class="swiper-slide d-flex justify-content-center">
+				  <div class="artwork-card" onclick="handleCardClick(${index})">
+					<img src="${nft.image}" alt="${nft.title}">
+					<div class="artwork-info">
+					  <h4 style="color: #000;">${nft.title}</h4>
+					  <p class="artist" style="color: #000;">by ${nft.creator} <img src="./images/verify.png" style="width:15px;height:15px" /></p>
+					  <div class="price" style="color: #000;">${nft.currentBid}ETH</div>
+					</div>
+				  </div>
+				</div>
+			  `).join("");
+	  
+			new Swiper(".swiper-container", {
+			  slidesPerView: 3,
+			  spaceBetween: 30,
+			  loop: true,
+			  autoplay: {
+				delay: 3000,
+				disableOnInteraction: false
+			  },
+			  navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev"
+			  },
+			  breakpoints: {
+				0: { slidesPerView: 1.1, spaceBetween: 20 },
+				576: { slidesPerView: 1.5, spaceBetween: 20 },
+				768: { slidesPerView: 2, spaceBetween: 25 },
+				992: { slidesPerView: 3, spaceBetween: 30 }
+			  }
+			});
+		  }
+	  
+		  function handleCardClick(index) {
+			const selectedNFT = trendingNFTs[index];
+			console.log("Selected NFT:", selectedNFT);
+			localStorage.setItem("nftCard", JSON.stringify(selectedNFT));
+			window.location.href = "product-card.html";
+		  }
+	  
+		  document.addEventListener("DOMContentLoaded", renderSwiperNFTs);
+		</script>
+        <!-- ========== End Trending Auctions ========== -->
+
+
+		<!-- ========== Start About ========== -->
+
+		<section class="about">
+            <div class="container">
+				<div class="row">
+					<div class="col-lg-6 d-flex align-items-center">
+						<div class="about-info">
+						    <h4 class="sub-title">Discover More</h4>
+							
+
+
+						    <h3 class="main-title text-dark">Explore & Sell Your Awesome NFTs Art</h3>
+						    <p class="text-dark" style="color: #000;">Unleash your creativity and turn your digital art into valuable assets on the blockchain. Whether you're a seasoned artist or just getting started, our platform empowers you to showcase, share, and sell your unique NFTs to a global audience.</p>
+							<p style="color: #000;">Join a thriving community of creators and collectors. Dive into a seamless experience where your art gets the spotlight it deserves—without the technical hassle.
+
+								From captivating visuals to rare collectibles, your next masterpiece could be the one everyone’s talking about.</p>
+							<a class="main-btn" href="about.html" target="_blank">Read More <i class="fa fa-arrow-right"></i></a>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="about-image">
+							<img class="img-fluid" src="images/about.png" alt>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- ========== End About ========== -->
+
+        <!-- ========== Start Roadmap ========== -->
+
+		<section class="roadmap">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h3 class="main-title text-dark">Our Roadmap</h3>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="roadmap-items">
+                            <div class="roadmap-item left">
+								<div class="roadmap-item-inner text-dark">
+									<h4 style="color: #000;">Connect Wallet</h4>
+									<p style="color: #000;">Seamlessly access the world of digital ownership.
+										To explore, mint, buy, or sell exclusive NFTs, connect your crypto wallet in seconds. We support MetaMask, WalletConnect, Coinbase Wallet, and more — your gateway to the decentralized web.</p>
+								</div>
+							</div>
+							<div class="roadmap-item right orange text-dark">
+								<div class="roadmap-item-inner">
+									<h4 style="color: #000;">Visit NFTs Market</h4>
+									<p style="color: #000;">Explore a vibrant, decentralized marketplace where artists and collectors come together. Discover exclusive digital assets, trending collections, and one-of-a-kind NFTs that match your style and vision.</p>
+								</div>
+							</div>
+							<div class="roadmap-item left purble text-dark">
+								<div class="roadmap-item-inner text-dark">
+									<h4 style="color: #000;">Buy Collections</h4>
+									<p style="color: #000;">Browse through carefully curated NFT collections from emerging and established creators. Secure your favorite pieces, support digital artists, and expand your crypto art portfolio.</p>
+								</div>
+							</div>
+							<div class="roadmap-item right">
+								<div class="roadmap-item-inner text-dark">
+									<h4 style="color: #000;">Add Your NFTs</h4>
+									<p style="color: #000;">Upload your own digital creations and mint them as NFTs. Whether it’s art, music, or collectibles, our intuitive platform makes it easy to tokenize your work and put it on display.</p>
+								</div>
+							</div>
+							<div class="roadmap-item left orange">
+								<div class="roadmap-item-inner text-dark">
+									<h4 style="color: #000;">Sell Your NFTs</h4>
+									<p style="color: #000;">List your NFTs for sale and gain exposure in a global market. Set your price, earn royalties, and watch your digital assets generate value as collectors discover your work.</p>
+								</div>
+							</div>
+							<div class="roadmap-item right purble">
+								<div class="roadmap-item-inner text-dark">
+									<h4 style="color: #000;">Personalize Your NFTs</h4>
+									<p style="color: #000;">Stand out by customizing your NFT listings with unique details, backgrounds, or interactive elements. Build a recognizable brand around your art and create deeper connections with collectors.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        <!-- ========== End Roadmap ========== -->
+
+		<!-- ========== Start Discover NFTs ========== -->
+
+		<section class="discover-nfts">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-3 col-12">
+						<h3 class="main-title text-dark">Discover NTFs</h3>
+					</div>
+					<div class="col-lg-9 col-12">
+						<div class="nfts-filter-content text-lg-right">
+							<div class="nfts-filter">
+								<div class="filter-wrap d-flex align-items-center justify-content-lg-end">
+									<div class="filter">
+									    <button type="button" data-filter="*" class="active">All</button>
+									    <button type="button" data-filter=".art" style="color: #000;">Art</button>
+									    <button type="button" data-filter=".music" style="color: #000;">Music</button>
+										<button type="button" data-filter=".video" style="color: #000;">Video</button>
+										<button type="button" data-filter=".sport" style="color: #000;">Sport</button>
+									    <button type="button" data-filter=".game" style="color: #000;">Game</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row grid">
+					<!-- Dynamic content will be loaded here by discover-nfts.js -->
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== End Discover NFTs ========== -->
+
+		<!-- Add discover-nfts.js before the closing body tag -->
+		<script src="js/discover-nfts.js"></script>
+                           
+
+		<!-- ========== End Discover NFTs ========== -->
+
+		<!-- ========== Start Teams ========== -->
+
+        <!-- <section class="teams">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<h3 class="main-title">Popular Artist</h3>
+					</div>
+					<div class="col-6">
+						<div class="artists-more discover-more text-right">
+							<a href="team.html" target="_blank">Discover more <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/1.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Yomna Doe</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>14.03 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/2.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Sinan Terry</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>4.53 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/3.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Yassir Yates</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>1.03 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/4.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Bulent Howlinsy</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>3.09 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/11.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Ayloul Smith</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>10.02 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/6.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Yara Yalma</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>6.24 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/7.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Wasim Doe</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>7.02 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/14.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Leila Howlinsy</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>9.42 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 col-12 item">
+						<div class="team-item d-flex align-items-center">
+                            <a class="team-item-artist-thumb" href="#0">
+								<img class="img-fluid" src="images/avatars/8.jpg" alt>
+							</a>
+							<div class="team-item-artist-info">
+								<h4 class="team-item-artist-name"><a href="#0">Simay Berrie</a></h4>
+								<div class="team-item-artist-revenue d-flex align-items-center">
+									<div class="nft-box-trending-icon">
+										<span>
+											<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M311.9 260.8L160 353.6 8 260.8 160 0l151.9 260.8zM160 383.4L8 290.6 160 512l152-221.4-152 92.8z"></path></svg>
+										</span>
+									</div>
+									<p>8.27 ETH</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- ========== End Teams ========== -->
+
+		<!-- ========== Start Blog ========== -->
+
+		<section class="blog">
+			<div class="container">
+				<div class="row">
+					<div class="col-6">
+						<h3 class="main-title">Latest News</h3>
+					</div>
+					<div class="col-6">
+						<div class="posts-more discover-more text-right">
+							<a href="blog.html" target="_blank">Discover more <i class="fa fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 item">
+						<div class="blog-item">
+							<div class="blog-item-wrap" style="background-image: url('images/blog/1.jpg');">
+                                <div class="blog-info">
+									<div class="post-content">
+										<span class="cat"><a href="#0">Nftartwork</a></span>
+										<h3 class="post-title">
+											<a href="blog-single.html">How to Create Your 1st Crypto NFTs</a>
+										</h3>
+									</div>
+									<div class="author-info d-flex align-items-center">
+									    <a class="author-info-thumb" href="#0"><img class="img-fluid" src="images/avatars/3.jpg" alt></a>
+									    <div class="author-info-content">
+									        <h4 class="author-info-name"><a href="#0">Yassir Yates</a></h4>
+									        <span class="post-date">September 17, 2022</span>
+								        </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6 item">
+						<div class="blog-item">
+							<div class="blog-item-wrap" style="background-image: url('images/blog/2.jpg');">
+                                <div class="blog-info">
+									<div class="post-content">
+										<span class="cat"><a href="#0">Digitalart</a></span>
+										<h3 class="post-title">
+											<a href="blog-single.html">It’s the Great Chance to Invest in NFTs</a>
+										</h3>
+									</div>
+									<div class="author-info d-flex align-items-center">
+									    <a class="author-info-thumb" href="#0"><img class="img-fluid" src="images/avatars/1.jpg" alt></a>
+									    <div class="author-info-content">
+									        <h4 class="author-info-name"><a href="#0">Yomna Doe</a></h4>
+									        <span class="post-date">September 17, 2022</span>
+								        </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- ========== End Blog ========== -->
+
+        <!-- ========== Start Footer ========== -->
+        
+        <footer class="footer">
+            <div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-4 col-sm-6 col-12 footer-menu">
+							<div class="footer-logo">
+								<a class="my-logo" href="index.html"><img class="img-fluid text-dark" src="images/logo2.png" alt=""></a>
+							</div>
+							<p class="text-dark">Discover, collect, and sell unique digital assets on our NFT marketplace. Empowering creators and connecting collectors through blockchain technology.</p>
+						</div>
+						<div class="col-lg-2 col-sm-6 col-12 footer-menu">
+							<div class="footer-item">
+								<h4>Site map</h4>
+								<ul class="list-unstyled">
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about.html">About us</a></li>
+									<li><a href="roadmap.html">Roadmap</a></li>
+									<li><a href="team.html">Our Team</a></li>
+									<li><a href="faq.html">FAQ</a></li>
+									<li><a href="blog.html">Articles</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-2 col-sm-6 col-12 footer-menu">
+							<div class="footer-item">
+								<h4>Company</h4>
+								<ul class="list-unstyled">
+									<li><a href="#0">Help & Support</a></li>
+									<li><a href="#0">Terms Canditions</a></li>
+									<li><a href="#0">Privacy Policy</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-lg-4 col-sm-6 col-12 footer-menu">
+							<div class="footer-item">
+								<h4>Subscribe Newsletter</h4>
+								<div class="footer-newsletter">
+									<input type="text" name="text" placeholder="Email address" required="">
+									<a class="submit" href="#0"><i class="fa fa-send"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom text-center">
+				<div class="container">
+                    <div class="copyright d-flex align-items-center justify-content-md-between flex-sm-wrap justify-content-sm-center">
+						<p>Copyright &copy; 2022, <span>opula2</span> All Rights Reserved.</p>
+						<ul class="list-unstyled social-media d-flex align-items-center">
+							<li><a href="#0"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#0"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#0"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#0"><i class="fa fa-linkedin"></i></a></li>
+							<li><a href="#0"><i class="fa fa-behance"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+        </footer>
+
+        <!-- ========== End Footer ========== -->
+        
+        <!-- ========== Start Scroll To Top  ========== -->
+        
+        <a href="#0" class="scroll-top">
+            <span><i class="fa fa-arrow-up"></i></span>
+        </a>
+        
+        <!-- ========== End Scroll To Top  ========== -->
+        
+        <!-- ========== Js ========== -->
+
+        <!-- jQuery -->
+        <script src="js/jquery-3.2.1.min.js"></script>
+		<!-- Popper Js  -->
+    	<script src="js/popper.min.js"></script>
+        <!-- Bootstrap 4 Js -->
+        <script src="js/bootstrap.min.js"></script>
+		<!-- Isotope Js -->
+        <script src="js/isotope.min.js"></script>
+        <!--  WOW Js  -->
+        <script src="js/wow.min.js"></script>
+        <!-- Custom Js -->
+        <script src="js/custom.js"></script>
+        <!-- Trending NFTs Script -->
+        <script src="js/trending-nfts.js"></script>
+    <div class="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>ass="gtranslate_wrapper"></div>
+<script>window.gtranslateSettings = {"default_language":"en","native_language_names":true,"detect_browser_language":true,"languages":["en","fr","it","es","de","gd","zh-TW","ja","ru","pt","tr"],"wrapper_selector":".gtranslate_wrapper","alt_flags":{"en":"usa","pt":"brazil","es":"mexico"}}</script>
+<script src="https://cdn.gtranslate.net/widgets/latest/float.js" defer></script>
+<!-- Smartsupp Live Chat script -->
+<script type="text/javascript">
+var _smartsupp = _smartsupp || {};
+_smartsupp.key = '739c2186b95bfaf8e056f92026a9a3396026f0a6';
+window.smartsupp||(function(d) {
+  var s,c,o=smartsupp=function(){ o._.push(arguments)};o._=[];
+  s=d.getElementsByTagName('script')[0];c=d.createElement('script');
+  c.type='text/javascript';c.charset='utf-8';c.async=true;
+  c.src='https://www.smartsuppchat.com/loader.js?';s.parentNode.insertBefore(c,s);
+})(document);
+</script>
+<noscript> Powered by <a href=“https://www.smartsupp.com” target=“_blank”>Smartsupp</a></noscript>
+</body>
+
+<!-- Mirrored from opula2.najmihasnaa.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 10:07:12 GMT -->
+</html>
+
+<script>
+$(document).ready(function() {
+    $('.nft-box-btn').click(function() {
+        const nftCard = {
+            title: $(this).closest('.nft-box').find('.nft-box-title').text(),
+            description: $(this).closest('.nft-box').find('.nft-box-user-name h4').text(),
+            image: $(this).closest('.nft-box').find('.nft-box-thumb img').attr('src'),
+            price: $(this).closest('.nft-box').find('.nft-box-price h4').text()
+        };
+        localStorage.setItem('nftCard', JSON.stringify(nftCard));
+        window.location.href = 'product-card.html';
+    });
+});
+</script>
